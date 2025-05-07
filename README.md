@@ -1,50 +1,67 @@
+Wazuh SIEM Home Lab
 
-  Wazuh SIEM Home Lab 
+"Sometimes science is more art than science, Morty." – Rick Sanchez
 
- "Sometimes science is more art than science, Morty." – Rick Sanchez
+[Wazuh Project Banner]
+(screenshots/Wazuh.png)
 
- Overview
+Overview:
+This project is a home-based SIEM lab using Wazuh, deployed in a cloud-based environment.
 
-This project is a home-based SIEM lab using Wazuh, designed to simulate real-world attacks and improve detection skills for SOC and blue team operations.
+It’s built to simulate real-world cyber attacks, generate actual logs, and monitor endpoints with multiple operating systems, all connected to a centralized Wazuh server for alerting and log correlation.
 
 Systems Monitored:
--  Windows 10
--  Kali Linux
--  macOS
--  Active Directory (Domain Controller)
+- Windows 10 Home (Attacker target)
+- Kali Linux (Attacker box)
+- macOS 15.3.2 (Normal user endpoint)
+- Windows Server 2019 AD (Domain Controller)
 
- 🔍 Simulated Attack Scenarios
+Simulated Attack Scenarios:
+- Port Scanning: Detected using Nmap from Kali to Windows 10
+- Brute Force: SSH/SMB login attempts (Hydra + Fail2Ban logs)
+- Privilege Escalation: Windows event logs for admin privilege abuse
+- Web Exploitation: LFI/XSS via Apache and PHP test app
+- Log Tampering: Simulated by manual modification of log files
 
-| Technique           | Description                                |
-|---------------------|--------------------------------------------|
-| Port Scanning       | Detected using Nmap from Kali to Win10     |
-| Brute Force         | SSH login attempts logged and alerted      |
-| Privilege Escalation| Windows event ID-based rule triggers       |
-| Web Exploitation    | LFI/XSS attempts on Apache server          |
+Misconfigurations Identified:
+Wazuh was also used to scan for common misconfigurations via the CIS benchmark for Windows Server 2019.
 
- What I Learned
+- 258 failed checks
+- Weak password policies
+- Guest account enabled
+- Missing account lockout thresholds
+- Unrestricted local admin access
 
-- Creating and tuning custom Wazuh rules
-- Investigating logs across diverse OSes
-- Using Wazuh dashboards to trace real threats
-- How attackers think... and how defenders catch them
+(See screenshots below)
 
+What I Learned:
+- How to centralize log data from multi-OS environments
+- Writing and tuning custom Wazuh rules and decoders
+- Investigating real alerts and correlating logs
+- Using Wazuh’s CIS checks to identify system weaknesses
 
-🛠️ Tools Used
-
-- Wazuh Manager + Agent
-- Filebeat + Elasticsearch
-- VirtualBox / VMware
+Tools Used:
+- Wazuh Manager & Agent
+- Filebeat
+- Elasticsearch & Kibana
 - Nmap, Hydra, Burp Suite
+- VMware Workstation / VirtualBox
 
-🎯 Goal
+Goal:
+The purpose of this lab is to:
+- Practice log-based detection
+- Understand attacker behavior and indicators
+- Strengthen real-world incident response skills
+- Simulate a basic SOC workflow with cloud components
 
-Strengthen hands-on skills in:
-- Threat Detection
-- Incident Response
-- Log Analysis
-- Realistic Blue Team Operations
+Screenshots:
+
+Wazuh Dashboard with Active Endpoints:
+(screenshots/Dashboard.png)
+
+Windows Server 2019 Threat Assessment (CIS Benchmark):
+(screenshots/windows19 threat assesment.png)
 
 ---
 
-Built with sweat, caffeine, and questionable sci-fi inspiration.
+Project built with sweat, logs, packet captures, and a bit of interdimensional sarcasm.
