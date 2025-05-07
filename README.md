@@ -1,19 +1,19 @@
 
-# 🧪 Wazuh SIEM Home Lab - Rick & Morty Edition
+  Wazuh SIEM Home Lab 
 
-> *"Sometimes science is more art than science, Morty."* – Rick Sanchez
+ "Sometimes science is more art than science, Morty." – Rick Sanchez
 
-## 👨‍💻 Overview
+ Overview
 
-This project is a home-based **SIEM lab** using **Wazuh**, designed to simulate real-world attacks and improve detection skills for SOC and blue team operations.
+This project is a home-based SIEM lab using Wazuh, designed to simulate real-world attacks and improve detection skills for SOC and blue team operations.
 
 Systems Monitored:
-- 🖥️ Windows 10
-- 💻 Kali Linux
-- 🍎 macOS
-- 🏢 Active Directory (Domain Controller)
+-  Windows 10
+-  Kali Linux
+-  macOS
+-  Active Directory (Domain Controller)
 
-## 🔍 Simulated Attack Scenarios
+ 🔍 Simulated Attack Scenarios
 
 | Technique           | Description                                |
 |---------------------|--------------------------------------------|
@@ -22,25 +22,22 @@ Systems Monitored:
 | Privilege Escalation| Windows event ID-based rule triggers       |
 | Web Exploitation    | LFI/XSS attempts on Apache server          |
 
-## 🧠 What I Learned
+ What I Learned
 
 - Creating and tuning custom Wazuh rules
 - Investigating logs across diverse OSes
 - Using Wazuh dashboards to trace real threats
 - How attackers think... and how defenders catch them
 
-## 🖼️ Screenshots
 
-Check out the `/screenshots` folder for dashboard visuals and alert examples.
-
-## 🛠️ Tools Used
+🛠️ Tools Used
 
 - Wazuh Manager + Agent
 - Filebeat + Elasticsearch
 - VirtualBox / VMware
 - Nmap, Hydra, Burp Suite
 
-## 🎯 Goal
+🎯 Goal
 
 Strengthen hands-on skills in:
 - Threat Detection
@@ -50,4 +47,4 @@ Strengthen hands-on skills in:
 
 ---
 
-*Built with sweat, caffeine, and questionable sci-fi inspiration.*
+Built with sweat, caffeine, and questionable sci-fi inspiration.
