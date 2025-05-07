@@ -2,10 +2,9 @@ Wazuh SIEM Home Lab
 
 "Sometimes science is more art than science, Morty." – Rick Sanchez
 
-[Wazuh Project Banner]
-(screenshots/Wazuh.png)
+![Wazuh Project Banner](screenshots/Wazuh.png)
 
-Overview:
+Overview:  
 This project is a home-based SIEM lab using Wazuh, deployed in a cloud-based environment.
 
 It’s built to simulate real-world cyber attacks, generate actual logs, and monitor endpoints with multiple operating systems, all connected to a centralized Wazuh server for alerting and log correlation.
@@ -23,7 +22,7 @@ Simulated Attack Scenarios:
 - Web Exploitation: LFI/XSS via Apache and PHP test app
 - Log Tampering: Simulated by manual modification of log files
 
-Misconfigurations Identified:
+Misconfigurations Identified:  
 Wazuh was also used to scan for common misconfigurations via the CIS benchmark for Windows Server 2019.
 
 - 258 failed checks
@@ -47,7 +46,7 @@ Tools Used:
 - Nmap, Hydra, Burp Suite
 - VMware Workstation / VirtualBox
 
-Goal:
+Goal:  
 The purpose of this lab is to:
 - Practice log-based detection
 - Understand attacker behavior and indicators
@@ -56,11 +55,14 @@ The purpose of this lab is to:
 
 Screenshots:
 
-Wazuh Dashboard with Active Endpoints:
-(screenshots/Dashboard.png)
+Wazuh Dashboard with Active Endpoints:  
+![Wazuh Dashboard](screenshots/Dashboard.png)
 
-Windows Server 2019 Threat Assessment (CIS Benchmark):
-(screenshots/windows19 threat assesment.png)
+Windows Server 2019 Threat Assessment (CIS Benchmark):  
+![Misconfig Screenshot](screenshots/windows19_threat_assesment.png)
+
+Sample Log File (Simulated Alerts):  
+[View wazuh_detailed_simulated_log.log](logs/wazuh_detailed_simulated_log.log)
 
 ---
 
