@@ -56,10 +56,11 @@ The purpose of this lab is to:
 Screenshots:
 
 Wazuh Dashboard with Active Endpoints:  
-![Wazuh Dashboard](screenshots/Dashboard .png)
+![Wazuh Dashboard](screenshots/Dashboard%20.png)
 
 Windows Server 2019 Threat Assessment (CIS Benchmark):  
-![Misconfig Screenshot](screenshots/windows19 threat assesment.png)
+![Misconfig Screenshot](screenshots/windows19%20threat%20assesment.png)
+
 
 
 Sample Log File (Simulated Alerts):  
