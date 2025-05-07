@@ -1,0 +1,23 @@
+
+===== SCENARIO: SSH Brute Force Attempt from Kali (192.168.131.133) =====
+2025/05/07 15:58:10 wazuh-agent[003] ossec-logcollector: WARNING: (4102): Failed SSH login for user 'root' from 192.168.131.133 port 58422
+2025/05/07 15:58:12 wazuh-agent[003] ossec-logcollector: WARNING: (4102): Failed SSH login for user 'admin' from 192.168.131.133 port 58426
+2025/05/07 15:58:14 wazuh-agent[003] ossec-logcollector: WARNING: (4102): Failed SSH login for user 'test' from 192.168.131.133 port 58431
+2025/05/07 15:58:17 wazuh-agent[003] ossec-logcollector: ALERT: (4105): Brute force attack detected from 192.168.131.133 - 3 failed logins in 10 seconds
+
+===== SCENARIO: RDP Brute Force Attempt from Win-Server2019 (10.100.102.15) =====
+2025/05/07 16:03:42 wazuh-agent[004] ossec-logcollector: WARNING: (4102): Failed RDP login for user 'administrator' from 10.100.102.15
+2025/05/07 16:03:46 wazuh-agent[004] ossec-logcollector: WARNING: (4102): Failed RDP login for user 'admin' from 10.100.102.15
+2025/05/07 16:03:51 wazuh-agent[004] ossec-logcollector: ALERT: (4105): Brute force detected on RDP from 10.100.102.15 - 2 consecutive failures
+
+===== SCENARIO: File Integrity Violation on Kali (192.168.131.133) =====
+2025/05/07 16:08:21 wazuh-agent[003] ossec-syscheckd: INFO: (6001): File integrity monitoring started.
+2025/05/07 16:08:55 wazuh-agent[003] ossec-syscheckd: ALERT: (6003): Integrity checksum changed for: '/etc/passwd'
+
+===== SCENARIO: Rootcheck Alert on Mac (10.5.0.2) =====
+2025/05/07 16:12:02 wazuh-agent[001] ossec-rootcheck: ALERT: (5104): Suspicious file found: /usr/local/bin/.hidden_backdoor
+2025/05/07 16:12:18 wazuh-agent[001] ossec-rootcheck: WARNING: (5103): World-writable file: /etc/shadow
+
+===== SCENARIO: Vulnerable Package Detected on Windows 10 (100.74.196.236) =====
+2025/05/07 16:14:32 wazuh-agent[002] wazuh-modulesd: Vulnerability Detector: INFO: (5460): Starting package inventory.
+2025/05/07 16:14:42 wazuh-agent[002] wazuh-modulesd: Vulnerability Detector: WARNING: (5503): Vulnerable package detected: openssh-7.2p2
